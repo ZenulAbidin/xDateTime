@@ -40,16 +40,14 @@ xDateTime has no external dependencies.
                                                                                                                                                                         
 ## Installation
 
-If you are on a Linux system, you can generate more recent locale and timezone data using
-the bundled python scripts:
-
+If you are on a Linux or MacOS system, you can generate more recent locale and timezone data
+using the bundled shell script:
 ```
 # In the current directory
-python3 gen-locale-data.py > x_datetime_locale_data.h 
-python3 gen-tz-data.py > x_datetime_timezone.h 
+./gen-locale-tz-data.sh
 ```
 
-Otherwise, you can use the pregenerated files, which have been made on an Ubuntu 22.04 machine.
+Otherwise, you can just use the pregenerated files, which have been made on an Ubuntu 22.04 machine.
 
 Being a single-header file, copy the files you want into your project, or simply copy them
 to /usr/local/include if you want them available to all projects.

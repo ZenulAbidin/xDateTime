@@ -5,8 +5,8 @@ find_package(GTest REQUIRED)
 
 set(XDATETIME_SOURCES test_xdatetime.cpp)
 set(HEADERS x_datetime.h x_datetime_locale_data.h x_datetime_timezone.h)
-list(TRANSFORM HEADERS PREPEND ${CMAKE_SOURCE_DIR}/)
-add_compile_options(-g -I${CMAKE_SOURCE_DIR}/)
+list(TRANSFORM HEADERS PREPEND ${CMAKE_SOURCE_DIR}/include/)
+add_compile_options(-g -I${CMAKE_SOURCE_DIR}/include/)
 
 add_executable(test_xDateTime ${XDATETIME_SOURCES} ${HEADERS})
 target_link_libraries(test_xDateTime GTest::gtest GTest::gtest_main)
